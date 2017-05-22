@@ -22,19 +22,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5xB-aL-N4m">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dVv-0a-YcE">
+                                <rect key="frame" x="0.0" y="60" width="375" height="607"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </scrollView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hGc-aQ-GBP">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="E3f-88-Kk5"/>
+                                </constraints>
                                 <items>
-                                    <navigationItem title="Title" id="cB5-Bo-Ap5"/>
+                                    <navigationItem title="Sign Up" id="c35-ke-0Oo">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="tt3-Ch-clD"/>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hGc-aQ-GBP" firstAttribute="leading" secondItem="JXq-sP-han" secondAttribute="leading" id="HSe-dI-ciJ"/>
+                            <constraint firstItem="hGc-aQ-GBP" firstAttribute="top" secondItem="JXq-sP-han" secondAttribute="top" id="QaS-k8-yG7"/>
+                            <constraint firstAttribute="trailing" secondItem="hGc-aQ-GBP" secondAttribute="trailing" id="Qby-dX-Eg1"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="naviBackButton" destination="tt3-Ch-clD" id="YaE-f8-lVn"/>
+                        <outlet property="naviItem" destination="c35-ke-0Oo" id="L9T-8j-SXO"/>
+                    </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="228" y="75"/>
+            <point key="canvasLocation" x="228" y="75.112443778110944"/>
         </scene>
     </scenes>
 </document>

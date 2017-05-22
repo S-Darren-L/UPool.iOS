@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		959A24811ED171BE00C343CE /* Localizable.plist in Resources */ = {isa = PBXBuildFile; fileRef = 959A24831ED171BE00C343CE /* Localizable.plist */; };
 		959A24861ED1722100C343CE /* Localizator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959A24851ED1722100C343CE /* Localizator.swift */; };
+		959A24881ED21D1C00C343CE /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 959A24871ED21D1C00C343CE /* SignUp.storyboard */; };
+		959A248A1ED21D4F00C343CE /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959A24891ED21D4F00C343CE /* SignUpViewController.swift */; };
 		959BD48D1ED167230054F885 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959BD48C1ED167230054F885 /* UIViewControllerExtension.swift */; };
 		95ABE0951ECEC95200C7E4F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95ABE0941ECEC95200C7E4F8 /* AppDelegate.swift */; };
 		95ABE0971ECEC95200C7E4F8 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95ABE0961ECEC95200C7E4F8 /* SignInViewController.swift */; };
@@ -39,6 +41,8 @@
 /* Begin PBXFileReference section */
 		959A24841ED171C300C343CE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = en; path = en.lproj/Localizable.plist; sourceTree = "<group>"; };
 		959A24851ED1722100C343CE /* Localizator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizator.swift; sourceTree = "<group>"; };
+		959A24871ED21D1C00C343CE /* SignUp.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
+		959A24891ED21D4F00C343CE /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		959BD48C1ED167230054F885 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		95ABE0911ECEC95200C7E4F8 /* UPool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UPool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95ABE0941ECEC95200C7E4F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				95ABE0961ECEC95200C7E4F8 /* SignInViewController.swift */,
+				959A24891ED21D4F00C343CE /* SignUpViewController.swift */,
 			);
 			name = ViesControllers;
 			sourceTree = "<group>";
@@ -92,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				95ABE0981ECEC95200C7E4F8 /* SignIn.storyboard */,
+				959A24871ED21D1C00C343CE /* SignUp.storyboard */,
 			);
 			name = StoryBoards;
 			sourceTree = "<group>";
@@ -272,6 +278,7 @@
 				959A24811ED171BE00C343CE /* Localizable.plist in Resources */,
 				95ABE09C1ECEC95200C7E4F8 /* Assets.xcassets in Resources */,
 				95ABE09A1ECEC95200C7E4F8 /* SignIn.storyboard in Resources */,
+				959A24881ED21D1C00C343CE /* SignUp.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +307,7 @@
 				95ABE0971ECEC95200C7E4F8 /* SignInViewController.swift in Sources */,
 				95ABE0951ECEC95200C7E4F8 /* AppDelegate.swift in Sources */,
 				959BD48D1ED167230054F885 /* UIViewControllerExtension.swift in Sources */,
+				959A248A1ED21D4F00C343CE /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

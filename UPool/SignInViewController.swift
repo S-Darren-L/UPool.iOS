@@ -16,7 +16,6 @@ class SignInViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet var SignUpButton: UIButton!
     @IBOutlet var SignInButton: UIButton!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
@@ -39,14 +38,23 @@ class SignInViewController: UIViewController, UITextFieldDelegate{
         SignInButton.layer.shadowOpacity = 1
     }
 
+    @IBAction func SignUp(_ sender: UIButton) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "SignUp", bundle: nil)
+        let signUpViewController = storyBoard.instantiateViewController(withIdentifier: "SignUpViewController") as! SignUpViewController
+        self.present(signUpViewController, animated: true, completion: nil)
+    }
+    
+    //Push view up when keyboard shows up
     func textFieldDidBeginEditing(_ textField: UITextField) {
         SignInScrollView.setContentOffset(CGPoint(x:0, y:150), animated: true)
     }
     
+    //Move view back when keyboard is dismissed
     func textFieldDidEndEditing(_ textField: UITextField) {
         SignInScrollView.setContentOffset(CGPoint(x:0, y:0), animated: true)
     }
     
+    //Dismiss keyboard when Return button is clicked
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true

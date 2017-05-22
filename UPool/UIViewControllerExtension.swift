@@ -30,4 +30,26 @@ extension UIViewController {
             self.dismiss(animated: true, completion: nil)
         }
     }
+    
+    //Set button sign in background style
+    func setButtonSignInStyle(button: UIButton) {
+        button.setTitleColor(UIColor.black, for: .normal)
+        button.backgroundColor = UIColor.white
+        button.layer.cornerRadius = 5
+        button.layer.shadowColor = UIColor.gray.cgColor
+        button.layer.shadowOffset = CGSize(width:1, height:1)
+        button.layer.shadowRadius = 5
+        button.layer.shadowOpacity = 1
+    }
+    
+    //Set button general background style
+    func setButtonGeneralStyle(button: UIButton) {
+        button.setTitleColor(UIColor.black, for: .normal)
+        button.backgroundColor = UIColor(rgb: 0xBDBDBD)
+        button.layer.cornerRadius = 3
+        button.layer.shadowColor = UIColor.gray.cgColor
+        button.layer.shadowOffset = CGSize(width:0.3, height:0.3)
+        button.layer.shadowRadius = 3
+        button.layer.shadowOpacity = 0.5
+    }
 }

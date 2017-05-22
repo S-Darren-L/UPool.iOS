@@ -27,8 +27,8 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3nz-iH-IUQ">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bDv-zn-WdB">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="627"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bDv-zn-WdB" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="548"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wcm-Er-7C5">
                                                 <rect key="frame" x="42" y="488" width="110" height="30"/>
@@ -94,10 +94,7 @@
                                                 <variation key="heightClass=compact-widthClass=compact" constant="50"/>
                                                 <variation key="heightClass=compact-widthClass=regular" constant="50"/>
                                             </constraint>
-                                            <constraint firstAttribute="bottom" secondItem="Wcm-Er-7C5" secondAttribute="bottom" constant="109" id="6ni-0J-ucX">
-                                                <variation key="heightClass=compact-widthClass=compact" constant="50"/>
-                                                <variation key="heightClass=compact-widthClass=regular" constant="50"/>
-                                            </constraint>
+                                            <constraint firstAttribute="bottom" secondItem="Wcm-Er-7C5" secondAttribute="bottom" constant="30" id="6ni-0J-ucX"/>
                                             <constraint firstItem="Wcm-Er-7C5" firstAttribute="top" secondItem="FnT-IX-pOQ" secondAttribute="bottom" constant="25" id="8rm-hJ-aMe"/>
                                             <constraint firstItem="t2Q-G3-vNP" firstAttribute="bottom" secondItem="Wcm-Er-7C5" secondAttribute="bottom" id="Gyg-Rx-Vva"/>
                                             <constraint firstItem="yCO-z0-HSY" firstAttribute="centerX" secondItem="bDv-zn-WdB" secondAttribute="centerX" id="KDv-rr-oya"/>

@@ -18,24 +18,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.hideKeyboardWhenTappedAround()
-        
-        SignInEmailTextField.placeholder = "EMAIL".localized
-        SignInPasswordTextField.placeholder = "PASSWORD".localized
-        SignUpButton.setTitle("SIGN_UP".localized, for: UIControlState.normal)
-        SignInButton.setTitle("SIGN_IN".localized, for: UIControlState.normal)
-        
-        SignUpButton.layer.cornerRadius = 5
-        SignUpButton.layer.shadowColor = UIColor.gray.cgColor
-        SignUpButton.layer.shadowOffset = CGSize(width:1, height:1)
-        SignUpButton.layer.shadowRadius = 5
-        SignUpButton.layer.shadowOpacity = 1
-        
-        SignInButton.layer.cornerRadius = 5
-        SignInButton.layer.shadowColor = UIColor.gray.cgColor
-        SignInButton.layer.shadowOffset = CGSize(width:1, height:1)
-        SignInButton.layer.shadowRadius = 5
-        SignInButton.layer.shadowOpacity = 1
+        uiInit()
     }
 
     @IBAction func SignUp(_ sender: UIButton) {
@@ -44,9 +27,25 @@ class SignInViewController: UIViewController, UITextFieldDelegate{
         self.present(signUpViewController, animated: true, completion: nil)
     }
     
+    //UI init
+    func uiInit(){
+        self.hideKeyboardWhenTappedAround()
+        
+        SignInEmailTextField.placeholder = "EMAIL".localized
+        SignInPasswordTextField.placeholder = "PASSWORD".localized
+        SignUpButton.setTitle("SIGN_UP".localized, for: UIControlState.normal)
+        setButtonSignInStyle(button: SignUpButton)
+        SignInButton.setTitle("SIGN_IN".localized, for: UIControlState.normal)
+        setButtonSignInStyle(button: SignInButton)
+    }
+    
     //Push view up when keyboard shows up
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        SignInScrollView.setContentOffset(CGPoint(x:0, y:150), animated: true)
+        if UIDeviceOrientationIsLandscape(UIDevice.current.orientation){
+            SignInScrollView.setContentOffset(CGPoint(x:0, y:160), animated: true)
+        }else if UIDeviceOrientationIsPortrait(UIDevice.current.orientation) {
+            SignInScrollView.setContentOffset(CGPoint(x:0, y:60), animated: true)
+        }
     }
     
     //Move view back when keyboard is dismissed

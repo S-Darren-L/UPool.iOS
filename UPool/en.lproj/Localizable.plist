@@ -12,5 +12,13 @@
 	<string>Email</string>
 	<key>PASSWORD</key>
 	<string>Password</string>
+	<key>TITLE</key>
+	<string>Title</string>
+	<key>FIRST_NAME</key>
+	<string>First Name</string>
+	<key>LAST_NAME</key>
+	<string>Last Name</string>
+	<key>REGISTER</key>
+	<string>Register</string>
 </dict>
 </plist>

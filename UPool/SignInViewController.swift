@@ -27,6 +27,12 @@ class SignInViewController: UIViewController, UITextFieldDelegate{
         self.present(signUpViewController, animated: true, completion: nil)
     }
     
+    @IBAction func SignIn(_ sender: Any) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "VehicleRequest", bundle: nil)
+        let vehicleRequestViewController = storyBoard.instantiateViewController(withIdentifier: "VehicleRequestViewController") as! VehicleRequestViewController
+        self.present(vehicleRequestViewController, animated: true, completion: nil)
+    }
+    
     //UI init
     func uiInit(){
         self.hideKeyboardWhenTappedAround()

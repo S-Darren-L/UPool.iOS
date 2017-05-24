@@ -79,6 +79,9 @@
                                                 <state key="normal" title="Sign In">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="SignIn:" destination="bZX-qD-gsM" eventType="touchUpInside" id="x7v-H6-riL"/>
+                                                </connections>
                                             </button>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_u" translatesAutoresizingMaskIntoConstraints="NO" id="yCO-z0-HSY">
                                                 <rect key="frame" x="127" y="108" width="120" height="120"/>

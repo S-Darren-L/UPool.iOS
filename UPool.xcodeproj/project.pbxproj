@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27AF4BDCA02B50EAA328F46E /* libPods-UPool.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B89FE8864429D629D9A8D7FF /* libPods-UPool.a */; };
+		953EAE351ED54D2800F9B281 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 953EAE341ED54D2800F9B281 /* Podfile */; };
 		9568A4301ED37F0000EAB05B /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9568A42F1ED37F0000EAB05B /* UIColorExtension.swift */; };
+		9568A4321ED5395700EAB05B /* VehicleRequest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9568A4311ED5395700EAB05B /* VehicleRequest.storyboard */; };
+		9568A4341ED5397800EAB05B /* VehicleRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9568A4331ED5397800EAB05B /* VehicleRequestViewController.swift */; };
 		959A24811ED171BE00C343CE /* Localizable.plist in Resources */ = {isa = PBXBuildFile; fileRef = 959A24831ED171BE00C343CE /* Localizable.plist */; };
 		959A24861ED1722100C343CE /* Localizator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959A24851ED1722100C343CE /* Localizator.swift */; };
 		959A24881ED21D1C00C343CE /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 959A24871ED21D1C00C343CE /* SignUp.storyboard */; };
@@ -40,7 +44,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5E85308045E832C988728C86 /* Pods-UPool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UPool.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UPool/Pods-UPool.debug.xcconfig"; sourceTree = "<group>"; };
+		953EAE341ED54D2800F9B281 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		9568A42F1ED37F0000EAB05B /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		9568A4311ED5395700EAB05B /* VehicleRequest.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VehicleRequest.storyboard; sourceTree = "<group>"; };
+		9568A4331ED5397800EAB05B /* VehicleRequestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleRequestViewController.swift; sourceTree = "<group>"; };
 		959A24841ED171C300C343CE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = en; path = en.lproj/Localizable.plist; sourceTree = "<group>"; };
 		959A24851ED1722100C343CE /* Localizator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizator.swift; sourceTree = "<group>"; };
 		959A24871ED21D1C00C343CE /* SignUp.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
@@ -59,6 +67,8 @@
 		95ABE0B01ECEC95200C7E4F8 /* UPoolUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UPoolUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		95ABE0B41ECEC95200C7E4F8 /* UPoolUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UPoolUITests.swift; sourceTree = "<group>"; };
 		95ABE0B61ECEC95200C7E4F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B89FE8864429D629D9A8D7FF /* libPods-UPool.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UPool.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA2DEA23198A7860BEBA1C1B /* Pods-UPool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UPool.release.xcconfig"; path = "Pods/Target Support Files/Pods-UPool/Pods-UPool.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27AF4BDCA02B50EAA328F46E /* libPods-UPool.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,11 +97,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		21DFA39A6E7B16AE094E3C65 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B89FE8864429D629D9A8D7FF /* libPods-UPool.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		942F1EA83DDEFA7B914AF375 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5E85308045E832C988728C86 /* Pods-UPool.debug.xcconfig */,
+				BA2DEA23198A7860BEBA1C1B /* Pods-UPool.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		956899B01ED0AD0900ADEEF6 /* ViesControllers */ = {
 			isa = PBXGroup;
 			children = (
 				95ABE0961ECEC95200C7E4F8 /* SignInViewController.swift */,
 				959A24891ED21D4F00C343CE /* SignUpViewController.swift */,
+				9568A4331ED5397800EAB05B /* VehicleRequestViewController.swift */,
 			);
 			name = ViesControllers;
 			sourceTree = "<group>";
@@ -100,6 +129,7 @@
 			children = (
 				95ABE0981ECEC95200C7E4F8 /* SignIn.storyboard */,
 				959A24871ED21D1C00C343CE /* SignUp.storyboard */,
+				9568A4311ED5395700EAB05B /* VehicleRequest.storyboard */,
 			);
 			name = StoryBoards;
 			sourceTree = "<group>";
@@ -118,10 +148,13 @@
 		95ABE0881ECEC95200C7E4F8 = {
 			isa = PBXGroup;
 			children = (
+				953EAE341ED54D2800F9B281 /* Podfile */,
 				95ABE0931ECEC95200C7E4F8 /* UPool */,
 				95ABE0A81ECEC95200C7E4F8 /* UPoolTests */,
 				95ABE0B31ECEC95200C7E4F8 /* UPoolUITests */,
 				95ABE0921ECEC95200C7E4F8 /* Products */,
+				942F1EA83DDEFA7B914AF375 /* Pods */,
+				21DFA39A6E7B16AE094E3C65 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -174,9 +207,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 95ABE0B91ECEC95200C7E4F8 /* Build configuration list for PBXNativeTarget "UPool" */;
 			buildPhases = (
+				C1F342C0C0C8589D5ECB20ED /* [CP] Check Pods Manifest.lock */,
 				95ABE08D1ECEC95200C7E4F8 /* Sources */,
 				95ABE08E1ECEC95200C7E4F8 /* Frameworks */,
 				95ABE08F1ECEC95200C7E4F8 /* Resources */,
+				DAEA5D1C8B2F1919B44DFF94 /* [CP] Embed Pods Frameworks */,
+				43D02D1C17C6931C871627E0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -280,7 +316,9 @@
 				95ABE09F1ECEC95200C7E4F8 /* LaunchScreen.storyboard in Resources */,
 				959A24811ED171BE00C343CE /* Localizable.plist in Resources */,
 				95ABE09C1ECEC95200C7E4F8 /* Assets.xcassets in Resources */,
+				9568A4321ED5395700EAB05B /* VehicleRequest.storyboard in Resources */,
 				95ABE09A1ECEC95200C7E4F8 /* SignIn.storyboard in Resources */,
+				953EAE351ED54D2800F9B281 /* Podfile in Resources */,
 				959A24881ED21D1C00C343CE /* SignUp.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,6 +339,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		43D02D1C17C6931C871627E0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UPool/Pods-UPool-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C1F342C0C0C8589D5ECB20ED /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DAEA5D1C8B2F1919B44DFF94 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UPool/Pods-UPool-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		95ABE08D1ECEC95200C7E4F8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -311,6 +397,7 @@
 				95ABE0951ECEC95200C7E4F8 /* AppDelegate.swift in Sources */,
 				959BD48D1ED167230054F885 /* UIViewControllerExtension.swift in Sources */,
 				959A248A1ED21D4F00C343CE /* SignUpViewController.swift in Sources */,
+				9568A4341ED5397800EAB05B /* VehicleRequestViewController.swift in Sources */,
 				9568A4301ED37F0000EAB05B /* UIColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -399,6 +486,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -450,6 +538,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -471,6 +560,7 @@
 		};
 		95ABE0BA1ECEC95200C7E4F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E85308045E832C988728C86 /* Pods-UPool.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = U2DQ2B2NSD;
@@ -484,6 +574,7 @@
 		};
 		95ABE0BB1ECEC95200C7E4F8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA2DEA23198A7860BEBA1C1B /* Pods-UPool.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = U2DQ2B2NSD;

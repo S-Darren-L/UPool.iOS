@@ -115,15 +115,6 @@
                                                     <outlet property="delegate" destination="V6C-l3-iEN" id="pCC-v8-neb"/>
                                                 </connections>
                                             </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yoJ-IJ-o7f">
-                                                <rect key="frame" x="25" y="194" width="325" height="30"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="Tge-gw-3CH"/>
-                                                </constraints>
-                                                <state key="normal" title="Button">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                            </button>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qj2-PR-DNL">
                                                 <rect key="frame" x="25" y="340" width="325" height="30"/>
                                                 <nil key="textColor"/>
@@ -133,9 +124,81 @@
                                                     <outlet property="delegate" destination="V6C-l3-iEN" id="ukg-9w-P2u"/>
                                                 </connections>
                                             </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yoJ-IJ-o7f">
+                                                <rect key="frame" x="25" y="194" width="325" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="Tge-gw-3CH"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <state key="normal" title="Miss">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="SelectTitle:" destination="V6C-l3-iEN" eventType="touchUpInside" id="thR-jR-Zci"/>
+                                                </connections>
+                                            </button>
+                                            <view hidden="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KpP-NF-68c">
+                                                <rect key="frame" x="37" y="154.5" width="300" height="200"/>
+                                                <subviews>
+                                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JrK-Lh-zO4">
+                                                        <rect key="frame" x="0.0" y="24.5" width="300" height="150"/>
+                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="300" id="fcG-6c-nSV"/>
+                                                            <constraint firstAttribute="height" constant="150" id="tBs-X6-NpX"/>
+                                                        </constraints>
+                                                    </pickerView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3n2-Jm-QIo">
+                                                        <rect key="frame" x="50" y="8" width="200" height="21"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="200" id="l2b-h8-TvL"/>
+                                                            <constraint firstAttribute="height" constant="21" id="tbD-rJ-eZK"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FJa-Z4-CRr">
+                                                        <rect key="frame" x="40" y="162" width="65" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="65" id="Qsg-eh-Icl"/>
+                                                            <constraint firstAttribute="height" constant="30" id="gIX-oR-Z9b"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Button"/>
+                                                        <connections>
+                                                            <action selector="TitlePickerCancel:" destination="V6C-l3-iEN" eventType="touchUpInside" id="qNH-Ms-LwX"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JC1-U6-ZrI">
+                                                        <rect key="frame" x="195" y="162" width="65" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="65" id="bHp-vf-zcH"/>
+                                                            <constraint firstAttribute="height" constant="30" id="iH4-L4-98y"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Button"/>
+                                                        <connections>
+                                                            <action selector="TitlePickerDone:" destination="V6C-l3-iEN" eventType="touchUpInside" id="Y9p-Ec-Bdd"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="FJa-Z4-CRr" secondAttribute="bottom" constant="8" id="2ge-43-ebX"/>
+                                                    <constraint firstItem="3n2-Jm-QIo" firstAttribute="top" secondItem="KpP-NF-68c" secondAttribute="top" constant="8" id="5dB-kU-soy"/>
+                                                    <constraint firstItem="FJa-Z4-CRr" firstAttribute="leading" secondItem="KpP-NF-68c" secondAttribute="leading" constant="40" id="6UZ-7f-C5D"/>
+                                                    <constraint firstItem="JrK-Lh-zO4" firstAttribute="centerX" secondItem="KpP-NF-68c" secondAttribute="centerX" id="IMy-tE-pdg"/>
+                                                    <constraint firstItem="JrK-Lh-zO4" firstAttribute="centerY" secondItem="KpP-NF-68c" secondAttribute="centerY" id="IlY-xo-n6g"/>
+                                                    <constraint firstAttribute="width" constant="300" id="T2S-bb-j9D"/>
+                                                    <constraint firstItem="JC1-U6-ZrI" firstAttribute="baseline" secondItem="FJa-Z4-CRr" secondAttribute="baseline" id="aJf-XG-nU0"/>
+                                                    <constraint firstItem="3n2-Jm-QIo" firstAttribute="centerX" secondItem="KpP-NF-68c" secondAttribute="centerX" id="mfA-Ev-Wsd"/>
+                                                    <constraint firstAttribute="trailing" secondItem="JC1-U6-ZrI" secondAttribute="trailing" constant="40" id="pCT-pC-0mP"/>
+                                                    <constraint firstAttribute="height" constant="200" id="wfF-s6-aSf"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
+                                            <constraint firstItem="KpP-NF-68c" firstAttribute="centerY" secondItem="PtB-vu-W4c" secondAttribute="centerY" id="2wf-id-AuT"/>
                                             <constraint firstItem="ltt-wb-Ppi" firstAttribute="leading" secondItem="PtB-vu-W4c" secondAttribute="leading" constant="25" id="4gM-ME-1md"/>
                                             <constraint firstItem="Ek6-cd-KWj" firstAttribute="leading" secondItem="10Y-bs-Yk1" secondAttribute="leading" id="4y2-gp-BEG"/>
                                             <constraint firstItem="Qj2-PR-DNL" firstAttribute="leading" secondItem="UBA-Hj-LdO" secondAttribute="leading" id="5Lp-Yd-FkE"/>
@@ -160,6 +223,7 @@
                                             <constraint firstItem="UBA-Hj-LdO" firstAttribute="top" secondItem="Ek6-cd-KWj" secondAttribute="bottom" constant="8" id="ggU-jb-WhJ"/>
                                             <constraint firstItem="jmG-JW-jR9" firstAttribute="top" secondItem="WAn-aD-Bkm" secondAttribute="bottom" constant="8" id="hEV-Tb-REq"/>
                                             <constraint firstItem="kBu-Ec-AoO" firstAttribute="top" secondItem="Qj2-PR-DNL" secondAttribute="bottom" constant="80" id="iaH-ER-mBK"/>
+                                            <constraint firstItem="KpP-NF-68c" firstAttribute="centerX" secondItem="PtB-vu-W4c" secondAttribute="centerX" id="kB9-6o-k53"/>
                                             <constraint firstItem="jmG-JW-jR9" firstAttribute="leading" secondItem="ltt-wb-Ppi" secondAttribute="leading" id="lSh-TT-Ul3"/>
                                             <constraint firstItem="UBA-Hj-LdO" firstAttribute="trailing" secondItem="yoJ-IJ-o7f" secondAttribute="trailing" id="moI-fH-XOZ"/>
                                             <constraint firstItem="epc-GW-ced" firstAttribute="top" secondItem="PtB-vu-W4c" secondAttribute="top" constant="20" id="vaK-E7-XQl"/>
@@ -207,10 +271,15 @@
                         <outlet property="SignUpLastNameTextField" destination="Qj2-PR-DNL" id="2uD-zz-glR"/>
                         <outlet property="SignUpPasswordLabel" destination="WAn-aD-Bkm" id="tn4-gT-jVl"/>
                         <outlet property="SignUpPasswordTextField" destination="jmG-JW-jR9" id="ZXQ-ka-stl"/>
+                        <outlet property="SignUpPickerCancelButton" destination="FJa-Z4-CRr" id="blU-22-ImI"/>
+                        <outlet property="SignUpPickerDoneButton" destination="JC1-U6-ZrI" id="WCZ-OY-T4T"/>
+                        <outlet property="SignUpPickerViewContainer" destination="KpP-NF-68c" id="3IZ-tn-6Mk"/>
+                        <outlet property="SignUpPickerViewTitle" destination="3n2-Jm-QIo" id="J0t-hw-if6"/>
                         <outlet property="SignUpRegisterButton" destination="kBu-Ec-AoO" id="r6R-s4-pKu"/>
                         <outlet property="SignUpScrollView" destination="dVv-0a-YcE" id="L0v-wB-rVt"/>
                         <outlet property="SignUpTitleLabel" destination="10Y-bs-Yk1" id="O5l-SK-IyB"/>
                         <outlet property="SignUpTitlePickerButton" destination="yoJ-IJ-o7f" id="jdx-Ls-Qsb"/>
+                        <outlet property="SignUpTitlePickerView" destination="JrK-Lh-zO4" id="reB-Cq-Djt"/>
                         <outlet property="naviBackButton" destination="tt3-Ch-clD" id="YaE-f8-lVn"/>
                         <outlet property="naviItem" destination="c35-ke-0Oo" id="L9T-8j-SXO"/>
                     </connections>

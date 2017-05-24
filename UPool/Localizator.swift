@@ -27,10 +27,26 @@ private class Localizator {
         }
         return localizedString
     }
+    
+    func arrayLocalize(string: String) -> Array<String> {
+        guard let localizedArray = (localizableDictionary.value(forKey: string) as AnyObject) as? Array<String> else{
+            assertionFailure("Missing translation for: \(string)")
+            return [String]()
+        }
+        return localizedArray
+    }
 }
 
 extension String {
     var localized: String {
         return Localizator.sharedInstance.localize(string: self)
+    }
+    
+    var arrayLocalized: Array<String>{
+        var array = [String]()
+        for item in Localizator.sharedInstance.arrayLocalize(string: self) {
+            array.append(item)
+        }
+        return array
     }
 }

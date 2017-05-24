@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SignUpViewController: UIViewController {
+class SignUpViewController: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource {
     
     @IBOutlet var naviItem: UINavigationItem!
     @IBOutlet var naviBackButton: UIBarButtonItem!
@@ -19,14 +19,34 @@ class SignUpViewController: UIViewController {
     @IBOutlet var SignUpPasswordTextField: UITextField!
     @IBOutlet var SignUpTitleLabel: UILabel!
     @IBOutlet var SignUpTitlePickerButton: UIButton!
+    @IBOutlet var SignUpPickerViewContainer: UIView!
+    @IBOutlet var SignUpPickerViewTitle: UILabel!
+    @IBOutlet var SignUpTitlePickerView: UIPickerView!
+    @IBOutlet var SignUpPickerCancelButton: UIButton!
+    @IBOutlet var SignUpPickerDoneButton: UIButton!
     @IBOutlet var SignUpFirstNameLabel: UILabel!
     @IBOutlet var SignUpFirstNameTextField: UITextField!
     @IBOutlet var SignUpLastNameLabel: UILabel!
     @IBOutlet var SignUpLastNameTextField: UITextField!
     @IBOutlet var SignUpRegisterButton: UIButton!
     
+    private var titleArray = [String]()
+    private var titleSelectedRow: Int
+
+    required init?(coder aDecoder: NSCoder) {
+        self.titleArray = "TITLE_ARRAY".arrayLocalized
+        self.titleSelectedRow = 0
+        super.init(coder: aDecoder)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Set up title picker view delegate and dataSource
+        SignUpTitlePickerView.delegate = self
+        SignUpTitlePickerView.dataSource = self
+        
+        //Init UI
         uiInit()
     }
     
@@ -47,7 +67,13 @@ class SignUpViewController: UIViewController {
         SignUpPasswordLabel.text = "PASSWORD".localized
         SignUpPasswordTextField.placeholder = "PASSWORD".localized
         SignUpTitleLabel.text = "TITLE".localized
-//        SignUpPasswordTextField.placeholder = "PASSWORD".localized
+        SignUpTitlePickerButton.setTitle(titleArray[titleSelectedRow], for: .normal)
+        setButtonTextFieldStyle(button: SignUpTitlePickerButton)
+        SignUpPickerViewTitle.text = "TITLE".localized
+        SignUpPickerCancelButton.setTitle("CANCEL".localized, for: .normal)
+        setButtonSignInStyle(button: SignUpPickerCancelButton)
+        SignUpPickerDoneButton.setTitle("DONE".localized, for: .normal)
+        setButtonSignInStyle(button: SignUpPickerDoneButton)
         SignUpFirstNameLabel.text = "FIRST_NAME".localized
         SignUpFirstNameTextField.placeholder = "FIRST_NAME".localized
         SignUpLastNameLabel.text = "LAST_NAME".localized
@@ -85,6 +111,37 @@ class SignUpViewController: UIViewController {
         return true
     }
     
+    @IBAction func SelectTitle(_ sender: UIButton) {
+        SignUpPickerViewContainer.isHidden = false
+    }
+    
+    //Set up title picker view
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return titleArray.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return titleArray[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        titleSelectedRow = row
+    }
+    
+    @IBAction func TitlePickerCancel(_ sender: UIButton) {
+        SignUpPickerViewContainer.isHidden = true
+    }
+    
+    @IBAction func TitlePickerDone(_ sender: UIButton) {
+        SignUpTitlePickerButton.setTitle(titleArray[titleSelectedRow], for: .normal)
+        SignUpPickerViewContainer.isHidden = true
+    }
+    
+    //Navigate back
     func navigateBack(sender:UIButton) {
         performNavigationBack()
     }

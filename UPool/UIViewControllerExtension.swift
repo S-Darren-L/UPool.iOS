@@ -31,7 +31,7 @@ extension UIViewController {
         }
     }
     
-    //Set button sign in background style
+    //Set button background sign in style
     func setButtonSignInStyle(button: UIButton) {
         button.setTitleColor(UIColor.black, for: .normal)
         button.backgroundColor = UIColor.white
@@ -42,7 +42,7 @@ extension UIViewController {
         button.layer.shadowOpacity = 1
     }
     
-    //Set button general background style
+    //Set button background generalstyle
     func setButtonGeneralStyle(button: UIButton) {
         button.setTitleColor(UIColor.black, for: .normal)
         button.backgroundColor = UIColor(rgb: 0xBDBDBD)
@@ -51,5 +51,16 @@ extension UIViewController {
         button.layer.shadowOffset = CGSize(width:0.3, height:0.3)
         button.layer.shadowRadius = 3
         button.layer.shadowOpacity = 0.5
+    }
+    
+    //Set button background TextField style
+    func setButtonTextFieldStyle(button: UIButton) {
+        button.setTitleColor(UIColor.black, for: .normal)
+        button.backgroundColor = UIColor.white
+        button.layer.cornerRadius = 5
+        if let colorCode = Int("TEXT_FIELD_BORDER_COLOR".localized, radix: 16){
+            button.layer.borderColor = UIColor(rgb: colorCode).cgColor}
+        button.layer.borderWidth = 1
+        button.contentEdgeInsets = UIEdgeInsets(top: 2, left: 7, bottom: 2, right: 7)
     }
 }

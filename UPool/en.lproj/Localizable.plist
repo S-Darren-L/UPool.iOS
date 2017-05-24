@@ -20,5 +20,19 @@
 	<string>Last Name</string>
 	<key>REGISTER</key>
 	<string>Register</string>
+	<key>TITLE_ARRAY</key>
+	<array>
+		<string>Miss</string>
+		<string>Mr.</string>
+		<string>Mrs.</string>
+		<string>Ms.</string>
+		<string>Dr.</string>
+	</array>
+	<key>CANCEL</key>
+	<string>Cancel</string>
+	<key>DONE</key>
+	<string>Done</string>
+	<key>TEXT_FIELD_BORDER_COLOR</key>
+	<string>e6e6e6</string>
 </dict>
 </plist>

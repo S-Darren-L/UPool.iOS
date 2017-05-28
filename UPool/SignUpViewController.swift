@@ -19,11 +19,6 @@ class SignUpViewController: UIViewController,UIPickerViewDelegate, UIPickerViewD
     @IBOutlet var SignUpPasswordTextField: UITextField!
     @IBOutlet var SignUpTitleLabel: UILabel!
     @IBOutlet var SignUpTitlePickerButton: UIButton!
-    @IBOutlet var SignUpPickerViewContainer: UIView!
-    @IBOutlet var SignUpPickerViewTitle: UILabel!
-    @IBOutlet var SignUpTitlePickerView: UIPickerView!
-    @IBOutlet var SignUpPickerCancelButton: UIButton!
-    @IBOutlet var SignUpPickerDoneButton: UIButton!
     @IBOutlet var SignUpFirstNameLabel: UILabel!
     @IBOutlet var SignUpFirstNameTextField: UITextField!
     @IBOutlet var SignUpLastNameLabel: UILabel!
@@ -41,10 +36,6 @@ class SignUpViewController: UIViewController,UIPickerViewDelegate, UIPickerViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //Set up title picker view delegate and dataSource
-        SignUpTitlePickerView.delegate = self
-        SignUpTitlePickerView.dataSource = self
         
         //Init UI
         uiInit()
@@ -69,11 +60,6 @@ class SignUpViewController: UIViewController,UIPickerViewDelegate, UIPickerViewD
         SignUpTitleLabel.text = "TITLE".localized
         SignUpTitlePickerButton.setTitle(titleArray[titleSelectedRow], for: .normal)
         setButtonTextFieldStyle(button: SignUpTitlePickerButton)
-        SignUpPickerViewTitle.text = "TITLE".localized
-        SignUpPickerCancelButton.setTitle("CANCEL".localized, for: .normal)
-        setButtonSignInStyle(button: SignUpPickerCancelButton)
-        SignUpPickerDoneButton.setTitle("DONE".localized, for: .normal)
-        setButtonSignInStyle(button: SignUpPickerDoneButton)
         SignUpFirstNameLabel.text = "FIRST_NAME".localized
         SignUpFirstNameTextField.placeholder = "FIRST_NAME".localized
         SignUpLastNameLabel.text = "LAST_NAME".localized
@@ -112,7 +98,28 @@ class SignUpViewController: UIViewController,UIPickerViewDelegate, UIPickerViewD
     }
     
     @IBAction func SelectTitle(_ sender: UIButton) {
-        SignUpPickerViewContainer.isHidden = false
+        let titlePickerAlert = UIAlertController(title: "TITLE".localized, message: "\n\n\n", preferredStyle: UIAlertControllerStyle.actionSheet);
+        titlePickerAlert.isModalInPopover = true;
+        let pickerFrame: CGRect = CGRect(x:0, y:30, width:titlePickerAlert.view.bounds.size.width-20, height:100);
+        
+        let signUpTitlePickerView: UIPickerView = UIPickerView(frame: pickerFrame)
+        signUpTitlePickerView.isHidden = false
+        
+        //set the pickers datasource and delegate
+        signUpTitlePickerView.delegate = self
+        signUpTitlePickerView.dataSource = self
+        //Add the picker to the alert controller
+        titlePickerAlert.view.addSubview(signUpTitlePickerView);
+        
+        
+        titlePickerAlert.addAction(UIAlertAction(title: "OK".localized, style: .default, handler: { (action: UIAlertAction!) in
+            self.SignUpTitlePickerButton.setTitle(self.titleArray[self.titleSelectedRow], for: .normal)
+        }))
+        
+        titlePickerAlert.addAction(UIAlertAction(title: "CANCEL".localized, style: .cancel, handler: { (action: UIAlertAction!) in
+        }))
+        
+        self.present(titlePickerAlert, animated: true, completion: nil);
     }
     
     //Set up title picker view
@@ -130,15 +137,6 @@ class SignUpViewController: UIViewController,UIPickerViewDelegate, UIPickerViewD
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         titleSelectedRow = row
-    }
-    
-    @IBAction func TitlePickerCancel(_ sender: UIButton) {
-        SignUpPickerViewContainer.isHidden = true
-    }
-    
-    @IBAction func TitlePickerDone(_ sender: UIButton) {
-        SignUpTitlePickerButton.setTitle(titleArray[titleSelectedRow], for: .normal)
-        SignUpPickerViewContainer.isHidden = true
     }
     
     //Navigate back

@@ -32,6 +32,8 @@
 	<string>Cancel</string>
 	<key>DONE</key>
 	<string>Done</string>
+	<key>OK</key>
+	<string>OK</string>
 	<key>TEXT_FIELD_BORDER_COLOR</key>
 	<string>e6e6e6</string>
 </dict>

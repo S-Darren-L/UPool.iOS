@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class SignUpViewController: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource {
     
@@ -27,10 +28,16 @@ class SignUpViewController: UIViewController,UIPickerViewDelegate, UIPickerViewD
     
     private var titleArray = [String]()
     private var titleSelectedRow: Int
+    
+    private let UserClassName:String = String(describing: User.self)
+    private let signUpModel: ISignUpModel!
+    private var user: User
 
     required init?(coder aDecoder: NSCoder) {
         self.titleArray = "TITLE_ARRAY".arrayLocalized
         self.titleSelectedRow = 0
+        self.user = NSEntityDescription.insertNewObject(forEntityName: UserClassName, into: LocalRepositoryService.getContext()) as! User
+        self.signUpModel = SignUpModel(user: user)
         super.init(coder: aDecoder)
     }
     
@@ -113,13 +120,23 @@ class SignUpViewController: UIViewController,UIPickerViewDelegate, UIPickerViewD
         
         
         titlePickerAlert.addAction(UIAlertAction(title: "OK".localized, style: .default, handler: { (action: UIAlertAction!) in
-            self.SignUpTitlePickerButton.setTitle(self.titleArray[self.titleSelectedRow], for: .normal)
+            self.user.title = self.titleArray[self.titleSelectedRow]
+            self.SignUpTitlePickerButton.setTitle(self.user.title, for: .normal)
         }))
         
         titlePickerAlert.addAction(UIAlertAction(title: "CANCEL".localized, style: .cancel, handler: { (action: UIAlertAction!) in
         }))
         
         self.present(titlePickerAlert, animated: true, completion: nil);
+    }
+    
+    @IBAction func Register(_ sender: UIButton) {
+        self.user.email = SignUpEmailTextField.text
+        self.user.firstName = SignUpFirstNameTextField.text
+        self.user.lastName = SignUpLastNameTextField.text
+        signUpModel.saveContext(user: self.user)
+        signUpModel.fetchRequest()
+        
     }
     
     //Set up title picker view

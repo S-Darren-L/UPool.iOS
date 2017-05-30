@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		27AF4BDCA02B50EAA328F46E /* libPods-UPool.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B89FE8864429D629D9A8D7FF /* libPods-UPool.a */; };
 		953EAE351ED54D2800F9B281 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 953EAE341ED54D2800F9B281 /* Podfile */; };
+		953EAE3B1EDCD99100F9B281 /* LocalRepositoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953EAE3A1EDCD99100F9B281 /* LocalRepositoryService.swift */; };
+		953EAE3E1EDCDCB500F9B281 /* UPool.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 953EAE3C1EDCDCB500F9B281 /* UPool.xcdatamodeld */; };
+		953EAE4E1EDD17DE00F9B281 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953EAE4C1EDD17DE00F9B281 /* User+CoreDataClass.swift */; };
+		953EAE4F1EDD17DE00F9B281 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953EAE4D1EDD17DE00F9B281 /* User+CoreDataProperties.swift */; };
+		953EAE521EDD186A00F9B281 /* SignUpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953EAE511EDD186A00F9B281 /* SignUpModel.swift */; };
 		9568A4301ED37F0000EAB05B /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9568A42F1ED37F0000EAB05B /* UIColorExtension.swift */; };
 		9568A4321ED5395700EAB05B /* VehicleRequest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9568A4311ED5395700EAB05B /* VehicleRequest.storyboard */; };
 		9568A4341ED5397800EAB05B /* VehicleRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9568A4331ED5397800EAB05B /* VehicleRequestViewController.swift */; };
@@ -24,6 +29,7 @@
 		95ABE09F1ECEC95200C7E4F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95ABE09D1ECEC95200C7E4F8 /* LaunchScreen.storyboard */; };
 		95ABE0AA1ECEC95200C7E4F8 /* UPoolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95ABE0A91ECEC95200C7E4F8 /* UPoolTests.swift */; };
 		95ABE0B51ECEC95200C7E4F8 /* UPoolUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95ABE0B41ECEC95200C7E4F8 /* UPoolUITests.swift */; };
+		95DBDDA81EDD3F9400D652B1 /* ISignUpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DBDDA71EDD3F9400D652B1 /* ISignUpModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +52,11 @@
 /* Begin PBXFileReference section */
 		5E85308045E832C988728C86 /* Pods-UPool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UPool.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UPool/Pods-UPool.debug.xcconfig"; sourceTree = "<group>"; };
 		953EAE341ED54D2800F9B281 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		953EAE3A1EDCD99100F9B281 /* LocalRepositoryService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalRepositoryService.swift; sourceTree = "<group>"; };
+		953EAE3D1EDCDCB500F9B281 /* UPool.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UPool.xcdatamodel; sourceTree = "<group>"; };
+		953EAE4C1EDD17DE00F9B281 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		953EAE4D1EDD17DE00F9B281 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		953EAE511EDD186A00F9B281 /* SignUpModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpModel.swift; sourceTree = "<group>"; };
 		9568A42F1ED37F0000EAB05B /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		9568A4311ED5395700EAB05B /* VehicleRequest.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VehicleRequest.storyboard; sourceTree = "<group>"; };
 		9568A4331ED5397800EAB05B /* VehicleRequestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleRequestViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +78,7 @@
 		95ABE0B01ECEC95200C7E4F8 /* UPoolUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UPoolUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		95ABE0B41ECEC95200C7E4F8 /* UPoolUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UPoolUITests.swift; sourceTree = "<group>"; };
 		95ABE0B61ECEC95200C7E4F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95DBDDA71EDD3F9400D652B1 /* ISignUpModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISignUpModel.swift; sourceTree = "<group>"; };
 		B89FE8864429D629D9A8D7FF /* libPods-UPool.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UPool.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA2DEA23198A7860BEBA1C1B /* Pods-UPool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UPool.release.xcconfig"; path = "Pods/Target Support Files/Pods-UPool/Pods-UPool.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -112,6 +124,32 @@
 				BA2DEA23198A7860BEBA1C1B /* Pods-UPool.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		953EAE391EDCD91300F9B281 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				953EAE3A1EDCD99100F9B281 /* LocalRepositoryService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		953EAE431EDD164A00F9B281 /* DataModels */ = {
+			isa = PBXGroup;
+			children = (
+				953EAE4C1EDD17DE00F9B281 /* User+CoreDataClass.swift */,
+				953EAE4D1EDD17DE00F9B281 /* User+CoreDataProperties.swift */,
+			);
+			name = DataModels;
+			sourceTree = "<group>";
+		};
+		953EAE501EDD184000F9B281 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				95DBDDA61EDD3F7700D652B1 /* IModels */,
+				953EAE511EDD186A00F9B281 /* SignUpModel.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		956899B01ED0AD0900ADEEF6 /* ViesControllers */ = {
@@ -171,13 +209,17 @@
 		95ABE0931ECEC95200C7E4F8 /* UPool */ = {
 			isa = PBXGroup;
 			children = (
-				959BD48B1ED166E50054F885 /* Resources */,
-				95ABE0941ECEC95200C7E4F8 /* AppDelegate.swift */,
-				956899B01ED0AD0900ADEEF6 /* ViesControllers */,
 				956899B11ED0AD1C00ADEEF6 /* StoryBoards */,
+				956899B01ED0AD0900ADEEF6 /* ViesControllers */,
+				953EAE501EDD184000F9B281 /* Models */,
+				953EAE391EDCD91300F9B281 /* Services */,
+				953EAE431EDD164A00F9B281 /* DataModels */,
+				959BD48B1ED166E50054F885 /* Resources */,
 				95ABE09B1ECEC95200C7E4F8 /* Assets.xcassets */,
-				95ABE09D1ECEC95200C7E4F8 /* LaunchScreen.storyboard */,
+				95ABE0941ECEC95200C7E4F8 /* AppDelegate.swift */,
 				95ABE0A01ECEC95200C7E4F8 /* Info.plist */,
+				95ABE09D1ECEC95200C7E4F8 /* LaunchScreen.storyboard */,
+				953EAE3C1EDCDCB500F9B281 /* UPool.xcdatamodeld */,
 			);
 			path = UPool;
 			sourceTree = "<group>";
@@ -198,6 +240,14 @@
 				95ABE0B61ECEC95200C7E4F8 /* Info.plist */,
 			);
 			path = UPoolUITests;
+			sourceTree = "<group>";
+		};
+		95DBDDA61EDD3F7700D652B1 /* IModels */ = {
+			isa = PBXGroup;
+			children = (
+				95DBDDA71EDD3F9400D652B1 /* ISignUpModel.swift */,
+			);
+			name = IModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -395,10 +445,16 @@
 				959A24861ED1722100C343CE /* Localizator.swift in Sources */,
 				95ABE0971ECEC95200C7E4F8 /* SignInViewController.swift in Sources */,
 				95ABE0951ECEC95200C7E4F8 /* AppDelegate.swift in Sources */,
+				953EAE3B1EDCD99100F9B281 /* LocalRepositoryService.swift in Sources */,
+				95DBDDA81EDD3F9400D652B1 /* ISignUpModel.swift in Sources */,
+				953EAE4E1EDD17DE00F9B281 /* User+CoreDataClass.swift in Sources */,
+				953EAE3E1EDCDCB500F9B281 /* UPool.xcdatamodeld in Sources */,
 				959BD48D1ED167230054F885 /* UIViewControllerExtension.swift in Sources */,
+				953EAE4F1EDD17DE00F9B281 /* User+CoreDataProperties.swift in Sources */,
 				959A248A1ED21D4F00C343CE /* SignUpViewController.swift in Sources */,
 				9568A4341ED5397800EAB05B /* VehicleRequestViewController.swift in Sources */,
 				9568A4301ED37F0000EAB05B /* UIColorExtension.swift in Sources */,
+				953EAE521EDD186A00F9B281 /* SignUpModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -684,6 +740,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		953EAE3C1EDCDCB500F9B281 /* UPool.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				953EAE3D1EDCDCB500F9B281 /* UPool.xcdatamodel */,
+			);
+			currentVersion = 953EAE3D1EDCDCB500F9B281 /* UPool.xcdatamodel */;
+			path = UPool.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 95ABE0891ECEC95200C7E4F8 /* Project object */;
 }
